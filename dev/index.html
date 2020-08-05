@@ -111,9 +111,9 @@
                         </div>
                     </div>
 
-                    <div class="product col">
+                    <div class="product product_sold col">
                         <div class="product__pic">
-                            <img src="static/img/pic-1.jpg" alt="pic-1">
+                            <img src="static/img/pic-4.jpg" alt="pic-4">
                         </div>
                         <div class="product__inner">
                             <a class="product__title" href="#">«Урок анатомии»  Рембрандт</a>
@@ -132,8 +132,8 @@
     <footer class="footer block-info">
         <div class="container row row_v-center">
             <!-- begin .logo -->
-            <a href="#" class="logo logo_footer block-info__left">
-                <svg class="logo__pic">
+            <a href="#" class="logo block-info__left">
+                <svg class="logo__pic logo__pic_footer">
                     <use xlink:href="static/img/sprite.svg#logo"></use>
                 </svg>
             </a>
@@ -161,14 +161,23 @@
             </nav>
             <!-- end .menu -->
 
-            <!-- begin .search -->
-            <div class="search block-info__right">
-                <form action="/" method="post" class="search__form">
-                    <input class="search__text" type="text" name="search" placeholder="Поиск по названию картины">
-                    <input class="btn search__btn" type="submit" name="submit" value="Найти">
-                </form>
+            <!-- begin .contacts -->
+            <div class="contacts row block-info__right">
+                <div class="phone">
+                    <svg class="phone__icon">
+                        <use xlink:href="static/img/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <a class="phone__link" href="tel:74955555555">+7 (495) 555-55-55</a>
+                </div>
+
+                <div class="address contacts__address">
+                    <svg class="address__icon">
+                        <use xlink:href="static/img/sprite.svg#icon-place"></use>
+                    </svg>
+                    <span class="address__name">г. Москва, ул. Расплетина, 24</span>
+                </div>
             </div>
-            <!-- end .search -->
+            <!-- end .contacts -->
 
         </div>
     </footer>

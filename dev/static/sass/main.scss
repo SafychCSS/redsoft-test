@@ -182,7 +182,20 @@ a {
     }
 
     &_check {
+        position: relative;
+        padding-left: 26px;
         background-color: $btn-bg-check;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            content: '';
+            width: 20px;
+            height: 12px;
+            margin-top: -6px;
+            background: url('../img/svg/icon-check.svg') no-repeat;
+        }
     }
 }
 
@@ -219,6 +232,10 @@ a {
         height: 48px;
         display: block;
         fill: $btn-bg-hover;
+    }
+
+    &__pic_footer {
+        fill: $btn-bg;
     }
 }
 
@@ -262,6 +279,11 @@ a {
         border: 1px solid $border-color;
         border-right: 0;
         background-color: transparent;
+        transition: .2s;
+
+        &:focus {
+            border-color: $border-color-active;
+        }
     }
 
     &__btn {
@@ -272,6 +294,20 @@ a {
 /*** .product ***/
 .product {
     border: 1px solid $border-color;
+
+    &_sold {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            background-color: rgba($main-bg, .5);
+        }
+    }
 
     &__pic {
         border-bottom: 1px solid #E7E7E7;
@@ -333,5 +369,35 @@ a {
 /*** .footer ***/
 .footer {
     padding: 23px 0;
+    color: #555;
     background-color: $bg-footer;
+}
+
+/*** .contacts ***/
+.contacts {
+    &__address {
+        margin-left: 52px;
+    }
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    &__icon {
+        width: 14px;
+        height: 14px;
+        padding-right: 10px;
+        fill: #555;
+    }
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    &__icon {
+        width: 11px;
+        height: 14px;
+        padding-right: 10px;
+        fill: #555;
+    }
 }
