@@ -1,0 +1,70 @@
+@import "mixin";
+
+$btn-bg: #403432;
+$btn-bg-hover: #776763;
+$btn-bg-disabled: #C1B4B1;
+$btn-bg-card: #5B3A32;
+
+$border-color: #E1E1E1;
+$border-color-active: #B5B5B5;
+$bg-footer: #ECEAEA;
+
+$text-color: #343030;
+
+/* merriweather-300 - cyrillic */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Merriweather Light'), local('Merriweather-Light'),
+    url('../fonts/merriweather-v21-cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/merriweather-v21-cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* merriweather-regular - cyrillic */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather Regular'), local('Merriweather-Regular'),
+    url('../fonts/merriweather-v21-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/merriweather-v21-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* merriweather-700 - cyrillic */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Merriweather Bold'), local('Merriweather-Bold'),
+    url('../fonts/merriweather-v21-cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/merriweather-v21-cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 400 14px/1.5 'Merriweather', serif;
+}
+
+h1, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4, h5, h6 {
+    font-size: 14px;
+}
+
+h6 {
+    font-weight: 300;
+}
