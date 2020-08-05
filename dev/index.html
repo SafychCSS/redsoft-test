@@ -12,17 +12,126 @@
 <div class="wrapper">
 
     <!-- begin .header -->
-    <header class="header"></header>
+    <header class="header">
+        <div class="container row row_v-center">
+
+            <!-- begin .logo -->
+            <a href="#" class="logo header__left">
+                <svg class="logo__pic">
+                    <use xlink:href="static/img/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <!-- end .logo -->
+
+            <!-- begin .menu -->
+            <nav class="header__center">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Каталог</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Доставка</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Оплата</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О галерее</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end .menu -->
+
+            <!-- begin .search -->
+            <div class="search header__right header__search">
+                <form action="/" method="post" class="search__form">
+                    <input class="search__text" type="text" name="search" placeholder="Поиск по названию картины">
+                    <input class="btn search__btn" type="submit" name="submit" value="Найти">
+                </form>
+            </div>
+            <!-- end .search -->
+        </div>
+    </header>
     <!-- end .header -->
 
     <!-- begin content -->
     <main class="main">
+        <div class="container">
+            <div class="main__product">
+                <h1>Картины эпохи Возрождения</h1>
+                <div class="row row_card main__card">
+                    <div class="product col">
+                        <div class="product__pic">
+                            <img src="static/img/pic-1.jpg" alt="pic-1">
+                        </div>
+                        <div class="product__inner">
+                            <a class="product__title" href="#">«Рождение Венеры» Сандро Боттичелли</a>
+                            <div class="product__block">
+                                <div class="price product__price">
+                                    <p class="price__old">2 000 000 $</p>
+                                    <p class="price__new">1 000 000 $</p>
+                                </div>
+                                <button class="btn btn_card">Купить</button>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="product col">
+                        <div class="product__pic">
+                            <img src="static/img/pic-2.jpg" alt="pic-2">
+                        </div>
+                        <div class="product__inner">
+                            <a class="product__title" href="#">«Тайная вечеря»  Леонардо да Винчи</a>
+                            <div class="product__block">
+                                <div class="price product__price">
+                                    <span class="price__new">3 000 000 $</span>
+                                </div>
+                                <button class="btn btn_card">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product col">
+                        <div class="product__pic">
+                            <img src="static/img/pic-3.jpg" alt="pic-3">
+                        </div>
+                        <div class="product__inner">
+                            <a class="product__title" href="#">«Сотворение Адама»
+                                Микеланджело</a>
+                            <div class="product__block">
+                                <div class="price product__price">
+                                    <span class="price__old">6 000 000 $</span>
+                                    <span class="price__new">5 000 000 $</span>
+                                </div>
+                                <button class="btn btn_check">В корзине</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product col">
+                        <div class="product__pic">
+                            <img src="static/img/pic-1.jpg" alt="pic-1">
+                        </div>
+                        <div class="product__inner">
+                            <a class="product__title" href="#">«Урок анатомии»  Рембрандт</a>
+                            <div class="product__block">
+                                <p class="product__sold">Продана на аукционе</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- end content -->
 
     <!-- begin .footer -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
     <!-- end .footer -->
 
 </div>
