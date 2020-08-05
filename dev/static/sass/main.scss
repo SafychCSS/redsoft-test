@@ -42,9 +42,15 @@ $text-color: #343030;
     url('../fonts/merriweather-v21-cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font: 400 14px/1.5 'Merriweather', serif;
     color: $text-color;
     background-color: $main-bg;
@@ -103,6 +109,12 @@ a {
     }
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .row {
     display: flex;
 
@@ -133,6 +145,7 @@ a {
 }
 
 .main {
+    height: 100%;
     &__product {
         margin-top: 47px;
     }
@@ -173,11 +186,8 @@ a {
     }
 }
 
-/*** .header ***/
-.header {
-    padding: 23px 0;
-    border-bottom: 1px solid $border-color;
-
+/*** .block-info ***/
+.block-info {
     &__left {
         margin-right: 24px;
     }
@@ -190,7 +200,12 @@ a {
     &__right {
         margin-left: auto;
     }
+}
 
+/*** .header ***/
+.header {
+    padding: 23px 0;
+    border-bottom: 1px solid $border-color;
     &__search {
         flex: 1;
         max-width: 416px;
@@ -313,4 +328,10 @@ a {
         font-size: 16px;
         font-weight: 700;
     }
+}
+
+/*** .footer ***/
+.footer {
+    padding: 23px 0;
+    background-color: $bg-footer;
 }

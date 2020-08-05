@@ -12,11 +12,11 @@
 <div class="wrapper">
 
     <!-- begin .header -->
-    <header class="header">
+    <header class="header block-info">
         <div class="container row row_v-center">
 
             <!-- begin .logo -->
-            <a href="#" class="logo header__left">
+            <a href="#" class="logo block-info__left">
                 <svg class="logo__pic">
                     <use xlink:href="static/img/sprite.svg#logo"></use>
                 </svg>
@@ -24,7 +24,7 @@
             <!-- end .logo -->
 
             <!-- begin .menu -->
-            <nav class="header__center">
+            <nav class="block-info__center">
                 <ul class="menu">
                     <li class="menu__item">
                         <a class="menu__link" href="#">Каталог</a>
@@ -46,7 +46,7 @@
             <!-- end .menu -->
 
             <!-- begin .search -->
-            <div class="search header__right header__search">
+            <div class="search block-info__right header__search">
                 <form action="/" method="post" class="search__form">
                     <input class="search__text" type="text" name="search" placeholder="Поиск по названию картины">
                     <input class="btn search__btn" type="submit" name="submit" value="Найти">
@@ -129,8 +129,48 @@
     <!-- end content -->
 
     <!-- begin .footer -->
-    <footer class="footer">
-        <div class="container"></div>
+    <footer class="footer block-info">
+        <div class="container row row_v-center">
+            <!-- begin .logo -->
+            <a href="#" class="logo logo_footer block-info__left">
+                <svg class="logo__pic">
+                    <use xlink:href="static/img/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <!-- end .logo -->
+
+            <!-- begin .menu -->
+            <nav class="block-info__center">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Каталог</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Доставка</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Оплата</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О галерее</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end .menu -->
+
+            <!-- begin .search -->
+            <div class="search block-info__right">
+                <form action="/" method="post" class="search__form">
+                    <input class="search__text" type="text" name="search" placeholder="Поиск по названию картины">
+                    <input class="btn search__btn" type="submit" name="submit" value="Найти">
+                </form>
+            </div>
+            <!-- end .search -->
+
+        </div>
     </footer>
     <!-- end .footer -->
 
