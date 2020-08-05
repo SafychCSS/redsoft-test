@@ -19,6 +19,7 @@ $text-color: #343030;
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: local('Merriweather Light'), local('Merriweather-Light'),
     url('../fonts/merriweather-v21-cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
     url('../fonts/merriweather-v21-cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -28,6 +29,7 @@ $text-color: #343030;
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local('Merriweather Regular'), local('Merriweather-Regular'),
     url('../fonts/merriweather-v21-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
     url('../fonts/merriweather-v21-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -37,6 +39,7 @@ $text-color: #343030;
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     src: local('Merriweather Bold'), local('Merriweather-Bold'),
     url('../fonts/merriweather-v21-cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
     url('../fonts/merriweather-v21-cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -156,6 +159,7 @@ a {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     width: 118px;
     padding: 17px 5px;
@@ -167,7 +171,7 @@ a {
     background-color: $btn-bg;
     border: 0;
     cursor: pointer;
-    transition: .2s;
+    transition: background .2s;
     
     &_card {
         background-color: $btn-bg-card;
@@ -182,7 +186,6 @@ a {
     }
 
     &_check {
-        position: relative;
         padding-left: 26px;
         background-color: $btn-bg-check;
 
@@ -197,6 +200,28 @@ a {
             background: url('../img/svg/icon-check.svg') no-repeat;
         }
     }
+
+    &_load {
+        text-indent: -9999px;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: '';
+            width: 10px;
+            height: 10px;
+            margin-top: -5px;
+            margin-left: -5px;
+            background: #fff;
+            animation: loader 1s infinite linear;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
 }
 
 /*** .block-info ***/
@@ -220,7 +245,7 @@ a {
     padding: 23px 0;
     border-bottom: 1px solid $border-color;
     &__search {
-        flex: 1;
+        width: 100%;
         max-width: 416px;
     }
 }
@@ -274,7 +299,7 @@ a {
 
     &__text {
         padding: 14px 16px;
-        flex: 1;
+        width: 100%;
         box-sizing: border-box;
         border: 1px solid $border-color;
         border-right: 0;
@@ -368,6 +393,7 @@ a {
 
 /*** .footer ***/
 .footer {
+    margin-top: 40px;
     padding: 23px 0;
     color: #555;
     background-color: $bg-footer;
